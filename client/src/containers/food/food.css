@@ -1,0 +1,284 @@
+div.content {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 89vh;
+	width: 100%; 
+	height: auto;
+	margin-top: 90px;
+}
+
+div.about-button-back {
+	align-self: flex-start;
+	margin-left: 70px;
+}
+
+div.about-button-back > i {
+	font-size: 2em;
+	color: rgba(0, 0, 0, 0.7); 
+	transition: color 0.5s; 
+}
+
+div.about-button-back > i:hover {
+	cursor: pointer;
+	color: rgba(149, 6, 196, 1);
+	transition: color 0.5s;
+}
+
+div.about-content {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 90%;	
+	height: 90%;
+	background-color: rgba(0, 0, 0, 0.9);
+	/*border-radius: 10px;*/
+	box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+div.about-top-part {
+	width: 100%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+div.about-top-part > div.image {
+	background-size: cover;
+    background-position: center;
+    /*border-radius: 10px;*/
+    width: 40%;
+    height: 35vh;
+    align-self: flex-start; 	
+    margin: 30px 15px auto 30px;
+ 	transition: background-size 0.1s;
+ 	box-shadow: 0px 0px 10px #000; 
+ 	
+}
+
+div.about-top-part > div.info {
+	width: 100%;
+	font-family: cursive;
+	color: floralwhite;
+	border-style: solid;
+	border-color: floralwhite;
+	/*border-radius: 10px;*/
+	min-height: 35vh;
+	align-self: stretch;		
+	max-width: 50%;
+	margin: 30px 30px auto 15px;
+	text-align: justify;
+	text-indent: 2em;
+	display: block;
+}
+
+div.about-top-part > div.info > div.title {
+	padding: 10px;
+	text-align: center;
+}
+
+div.about-top-part > div.info > div.title > span {
+	font-size: x-large;
+}
+
+div.about-top-part > div.info > div.about {
+	padding: 10px;
+}
+
+div.about-bottom-part-left {
+	margin: 10px;
+	margin-top: 55px;
+	height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.about-bottom-part-left .rating {
+	align-self: flex-end;
+	margin-bottom: 20px;
+}
+
+div.about-bottom-part-left i {
+	color: yellow;
+	font-size: 20px;
+}
+
+div.about-bottom-part-left .favorites {
+	color: red;
+}
+
+div.about-bottom-part-left > i {
+	margin-bottom: 20px;
+	color: floralwhite;
+	transition: color .2s;
+	align-self: flex-end;
+}
+
+
+div.about-bottom-part-left span {
+	font-family: cursive;
+    color: floralwhite;
+	font-size: medium;
+	margin-left: 10px;
+	font-size: 18px;
+}
+
+div.about-bottom-part-rigth {
+	width: 30%;
+	font-family: cursive;
+	color: floralwhite;
+	font-size: medium;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-self: flex-end;
+	margin: 30px;
+}
+
+div.about-bottom-part-rigth > .container-weight {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: auto auto 10px auto;
+	width: 100%;
+}
+
+div.about-bottom-part-rigth > div.container-price {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: auto auto 10px auto;
+	width: 100%;
+}
+
+div.about-bottom-part-rigth > div.container-count {
+	width: 100%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: auto 0 10px 0;
+}
+
+div.about-bottom-part-rigth > div.container-count > div.inc-dec > input {
+	margin: auto 3.5px;
+	width: 5em;
+	background-color: rgba(255, 255, 255, 0);
+	border-color: floralwhite;
+	border-style: solid;
+	/*border-radius: 5px;*/
+	color: floralwhite;
+	text-align: center;
+	font-size: 1em;
+}
+
+div.about-bottom-part-rigth > div.container-count > div.inc-dec > button {
+	background-color: rgba(255, 255, 255, 0);
+	border-color: floralwhite;
+	border-style: solid;
+	/*border-radius: 5px;*/
+	color: floralwhite;
+	text-align: center;	
+	width: 30px;
+	font-size: 1em;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.about-bottom-part-rigth > div.container-count > div.inc-dec > button:hover {
+	background-color: rgba(255, 255, 255, 1);
+	border-color: floralwhite;
+	border-style: solid;
+	/*border-radius: 5px;*/
+	color: black;
+	text-align: center;	
+	cursor: pointer;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.about-bottom-part-rigth > div.container-total-price {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: auto auto 10px auto;
+	width: 100%;
+}
+
+div.about-bottom-part-rigth > div.add-on-cart {
+	align-self: flex-end;
+}
+
+div.about-bottom-part-rigth > div.add-on-cart > button {
+	background-color: rgba(255, 255, 255, 0);
+	border-color: floralwhite;
+	border-style: solid;
+	/*border-radius: 5px;*/
+	color: floralwhite;
+	text-align: center;	
+	width: 150px;
+	height: 40px;
+	font-family: cursive;
+	font-size: 1em;
+	transition: background-color 0.5s,
+				color 0.5s;	
+}
+
+div.about-bottom-part-rigth > div.add-on-cart > button:hover {
+	background-color: rgba(255, 255, 255, 1);
+	border-color: floralwhite;
+	border-style: solid;
+	/*border-radius: 5px;*/
+	color: rgba(0, 0, 0, 1);
+	text-align: center;	
+	cursor: pointer;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+
+/*RESET*/
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, all-priceary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}*/

@@ -1,0 +1,65 @@
+body { 
+	background-image: url(../../img/background2.jpg);	 
+	background-position: center;
+	background-size: 800px 400px;
+	margin: 0px;
+	padding: 0px;
+	height: 100vh;
+}
+
+#root {
+	min-height: 75vh;
+	height: 100%;
+}
+
+div.container-succesfull {
+	transition: opacity 0.5s;
+	opacity: 0;
+    width: 25%;
+    height: auto;
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 70vh;
+    left: 10%;
+    /*border-radius: 20px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.container-succesfull.on {
+	transition: opacity 0.5s;
+	opacity: 1;
+    width: 25%;
+    height: auto;
+    min-height: 100px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 70vh;
+    left: 10%;
+    /*border-radius: 20px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+div.container-succesfull > div.text-succesfull {
+	text-align: center;
+}
+
+div.container-succesfull > div.text-succesfull > span {
+	color: floralwhite;
+    font-family: cursive;
+    font-size: medium;
+}
+
+div.container-succesfull > div.image-succesfull > i {
+	color: rgba(149, 6, 196, 0.8);
+    font-size: 2em;
+}

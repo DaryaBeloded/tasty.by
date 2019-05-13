@@ -1,0 +1,148 @@
+.wrapper-cafe {
+    display: flex;
+    flex-direction: column;    
+    width: 90%;
+    margin: 130px auto auto auto;
+}
+
+.container-cafe {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.info.top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info.top-row .img-container {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.info.top-row .img-container img {
+    align-self: center;
+    height: 100%;
+}
+
+.info.top-row .container-description {
+    border: solid floralwhite;
+    width: 50%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+} 
+
+.info.top-row .container-description span {
+    font-family: cursive;
+    color: floralwhite;
+}
+
+.info.top-row .container-description .cafe-title {
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.info.top-row .container-description .cafe-desc {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.info.top-row .container-description .cafe-desc span {
+    margin-bottom: 10px;
+}
+
+.info.top-row .container-description .cafe-desc  a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: floralwhite;
+}
+
+.wrapper-cafe .filter {
+    margin: 30px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    padding: 15px 30px;
+}
+
+.wrapper-cafe .filter span {
+    font-family: cursive;
+    color: floralwhite;
+    font-size: 18px;    
+}
+
+.cafe-foods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-food {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 330px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    margin: 0 20px 20px 20px;
+}
+
+.card-food img {
+    width: 100%;
+    min-width: 320px;
+    max-height: 250px;
+    height: auto;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,1);
+    -webkit-transform: scale(1.0,1.0);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 200ms;
+    -moz-transform: scale(1.0,1.0);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 200ms;
+}
+
+.card-food img:hover {
+    -webkit-transform: scale(1.07,1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 200ms;
+    -moz-transform: scale(1.07,1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.card-food span {
+    font-family: cursive;
+    color: floralwhite;
+    font-size: 15px; 
+}
+
+.card-food .food-info {
+    width: 90%;
+    padding: 10px 0; 
+    display: flex;
+    flex-direction: column;
+}
+
+.food-info div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

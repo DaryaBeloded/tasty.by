@@ -1,0 +1,217 @@
+.personalarea {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 88vh;
+    width: 100%;
+    height: auto;
+    margin-top: 90px;
+    left: 0px;
+}
+
+.personalarea-menu {
+    width: 20%;
+    min-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+} 
+
+.personalarea-info {
+    width: 100%;
+}
+
+.personalarea-info > div {
+    text-align: center;
+    padding: 15px;
+    transition: background-color .5s;
+}
+
+.personalarea-info > .active {
+    background-color: #68076e;
+    transition: background-color .5s;
+}
+
+.personalarea-info > div > a {
+    font-family: cursive;
+    font-size: medium;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.personalarea-content {
+    width: 72%;
+    min-height: 70vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+.history-content {
+    
+}
+
+.favorites-content {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.favorites-content .container {
+    height: max-content;
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: background-color .5s;
+}
+
+.favorites-content .container:hover {
+    transition: background-color .5s;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.favorites-content .container .img {
+    min-width: 150px;
+    height: 100px;
+    align-self: center;
+    text-align: center;
+}
+
+.favorites-content .container .img img {
+    height: inherit;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.favorites-content .container .description {
+    margin: 0 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid floralwhite;
+
+}
+
+.favorites-content .container .description span:first-child {
+    align-self: center;  
+}
+
+.favorites-content .container .description span:nth-child(3) {
+    align-self: flex-end;  
+}
+
+.favorites-content .container .description span:last-child {
+    align-self: flex-end;  
+    margin-bottom: 0;
+}
+
+.favorites-content .container .description span {
+    font-family: cursive;
+    font-size: medium;
+    color: floralwhite;
+    margin-bottom: 10px;
+}
+
+.favorites-content .container .favorites {
+    opacity: 0.5;
+    color: red;
+    font-size: 20px;
+    transform: scale(1, 1);
+    align-self: center;
+    transition: transform .2s, opacity .2s;
+}
+
+.favorites-content .container .favorites:hover {
+    transform: scale(1.1, 1.1);
+    transition: transform .2s, opacity .2s;
+    opacity: 1;
+}
+
+.personalarea-content > div {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.personal-data-content > form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personal-data-content > form > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+}
+
+.personal-data-content .container > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.personal-data-content > form div span {
+    min-width: 60px;
+    font-family: cursive;
+    font-size: medium;
+    color: floralwhite;
+    width: 160px;
+}
+
+.personal-data-content .note{
+    text-align: center;
+}
+
+.personal-data-content span:last-child {
+    width: 100%;
+}
+
+.personal-data-content > form div input {
+    min-width: 100px;
+    width: 250px;
+    height: 25px;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.5s;
+    border: none;
+    /*border-radius: 5px;*/
+    text-align: center;
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+}
+
+.personal-data-content > form > .save > button {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: medium;
+    font-family: cursive;
+    padding: 5px 15px;
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    /* border-radius: 5px; */
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.personal-data-content > form > .save > button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    transition: background-color 0.5s, color 0.5s;
+}

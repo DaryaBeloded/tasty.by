@@ -1,0 +1,518 @@
+.react-datepicker-wrapper {
+	width: 80%;
+}
+
+.react-datepicker__input-container {
+	width: 100%;
+}
+
+.react-datepicker__month-container {
+	font-family: cursive;
+	font-size: larger;
+}
+
+.react-datepicker__time-container {
+	font-family: cursive;
+	font-size: larger;
+}
+
+.react-datepicker__day--selected {
+	background-color: rgba(149, 6, 196, 0.8);
+}
+
+.react-datepicker__day--selected:hover {
+	background-color: rgba(149, 6, 196, 0.8);
+}
+
+.react-datepicker__time-list-item--selected {
+	background-color: rgba(149, 6, 196, 0.8) !important;
+}
+
+.react-datepicker__time-list-item--selected:hover {
+	background-color: rgba(149, 6, 196, 0.8);
+}
+
+.custom-calendar {
+	width: 100% !important;
+}	
+
+div.full-window {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 88vh;
+    width: 100%;
+    height: auto;
+    margin-top: 90px;
+} 
+
+div.cart-content {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 75vh;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.9);
+    /*border-radius: 10px;*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+
+div.cart-content > div.cart-current-title {
+	align-self: flex-start;
+	margin: 20px 0 0 20px;	
+}
+
+div.cart-content > div.cart-current-title > span {
+	font-family: cursive;
+	font-size: larger;
+	color: floralwhite;
+}
+
+div.cart-content > div.cart-all-food {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 97%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+div.cart-content > div.cart-all-food a {
+	text-decoration: none;
+	width: 97%;
+	align-self: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+div.cart-content > div.cart-all-food div.cart-container-food {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    min-height: 100px;
+    transition: background-color 0.5s;
+	padding: 15px 0;
+}
+
+div.cart-container-food:hover {
+	background-color: rgba(0,0,0,0.8);
+	transition: background-color 0.5s;
+	cursor: pointer;
+}
+
+
+div.cart-content > div.cart-all-food div.cart-container-food > div.food-image {
+	background-position: center;
+	background-size: cover;
+	min-width: 200px;
+	min-height: 100px;	
+	/*border-radius: 5px;*/
+	box-shadow: 0px 0px 10px #000; 
+}
+
+div.cart-content > div.cart-all-food div.cart-container-food > div.food-image > img {
+	width: 200px;
+	height: 100px;
+}
+
+div.cart-all-food div.cart-container-food > div.container-about-food{
+	width: 60%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    /*border-radius: 10px; */
+    padding: 10px;
+    min-height: 76px; 
+    margin: 0 10px;
+}	
+
+div.cart-container-food > div.container-about-food > div.name-food > span {
+	font-size: large;
+	font-family: cursive;
+	color: rgba(255, 255, 255, 1);
+}
+
+div.cart-container-food > div.container-about-food > div.count-of-food {
+	align-self: flex-end;
+	width: 150px;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.cart-container-food > div.container-about-food > div.count-of-food > span {
+	font-size: medium;
+	font-family: cursive;
+	color: rgba(255, 255, 255, 1);
+}
+
+div.cart-container-food > div.container-about-food > div.total-price {
+	align-self: flex-end;
+	width: 150px;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.cart-container-food > div.container-about-food > div.total-price > span {
+	font-size: medium;
+	font-family: cursive;
+	color: rgba(255, 255, 255, 1);
+}
+
+div.cart-container-food > button {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 2em;
+	padding:0 15px;
+	color: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+	border-style: solid;
+	/*border-radius: 10px; */
+	align-self: center;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.cart-container-food > button:hover {
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+	cursor: pointer;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.cart-container-confirm {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;	
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px 20px 0;
+    width: 97%;
+
+}
+
+div.cart-container-confirm > div.container-clear {
+	margin-left: 20px;
+	width: 173px;
+} 
+
+div.cart-container-confirm > div.container-clear > button {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: medium;
+	font-family: cursive;
+	padding: 5px 15px;
+	color: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+	border-style: solid;
+	/*border-radius: 5px; */
+	align-self: center;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.cart-container-confirm > div.container-clear > button:hover {
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+	cursor: pointer;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.cart-container-confirm > div.container-total-price {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+div.cart-container-confirm > div.container-total-price > span {
+	font-size: medium;
+	font-family: cursive;
+	color: rgba(255, 255, 255, 1);
+}
+
+div.cart-container-confirm > div.container-total-price > span.span-total-price {
+	margin-left: 10px;
+}
+
+div.cart-container-confirm > div.container-confirm-order > button {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: medium;
+	font-family: cursive;
+	padding: 5px 15px;
+	color: rgba(255, 255, 255, 1);
+	border-color: rgba(255, 255, 255, 1);
+	border-style: solid;
+	/*border-radius: 5px; */
+	align-self: center;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.cart-container-confirm > div.container-confirm-order > button:hover {
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(0, 0, 0, 1);
+	cursor: pointer;
+	transition: background-color 0.5s,
+				color 0.5s;
+}
+
+div.cover {
+	display: none;
+}
+
+div.cover.on {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: 9000;
+  	width: 100%;
+  	height: 100%;
+  	background-color: rgba(0, 0, 0, 0.7);
+}
+
+div.container-order {
+	display: none;
+}
+
+div.container-order.on {
+	display: block;
+	margin: auto;
+	width: 400px;
+	height: auto;
+	z-index: 9001;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px; 
+}
+
+form.form-login {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center;
+}
+
+form.form-login > * {
+	margin: 15px auto;
+}
+
+form.form-login > div.container > div.login-logo {
+	margin: auto 5.5em auto 7.5em;
+	align-self: center;
+}
+
+form.form-login > div.container > div.login-logo:hover {
+    cursor: pointer;
+}
+
+form.form-login > div.container > div.login-logo > img {
+	height: 100px; 
+}
+
+form.form-login > div.container {
+	width: 90%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between; 
+	align-items: center;
+}
+
+form.form-login > div.container > div.close-login {
+	align-self: flex-start;
+    -webkit-transform: rotate(0deg);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: rotate(0deg);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+}
+
+form.form-login > div.container > div.close-login:hover {	
+    -webkit-transform: rotate(360deg);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: rotate(360deg);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+	cursor: pointer;
+}
+
+form.form-login > div.container > div.close-login > i {
+	color: rgba(149, 6, 196, 0.8);
+	font-size: 3em;
+	-webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 350ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 350ms;
+}
+
+form.form-login > div.container > div.close-login > i:hover {
+	-webkit-transform: scale(1.2,1.2);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 350ms;
+    -moz-transform: scale(1.2,1.2);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 350ms;
+}
+
+form.form-login input {
+	width: 80%;
+	height: 25px;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(220, 220, 220, 1);
+	transition: background-color 0.5s ;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+}
+
+form.form-login > input:hover {
+	transition: background-color 0.5s ;
+}
+
+form.form-login > div.container-button > button {
+	width: 100px;
+	height: 30px;
+	font-family: 'Gloria Hallelujah', cursive;
+	transition: border-color 0.5s;
+	background-color: rgba(0, 0, 0, 0);
+	color: rgba(220, 220, 220, 1);
+	border-radius: 5px;
+	border-color: white;
+}
+
+form.form-login > div.container-button > button:hover {
+	transition: border-color 0.5s;
+	cursor: pointer;
+	border-color: rgba(136, 16, 196, 0.7);
+}
+
+form.form-login > div.container-button > button.button-login {
+	margin-right: 10px;
+}
+
+form.form-login > div.container-button > button.button-registration {
+	margin-left: 10px;
+}
+
+form.form-login > span {
+	color: white;
+	opacity: 0.7;
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: medium;
+}
+
+form.form-login > div.login-with {
+	width: 70%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; 
+	align-items: center;
+}
+
+form.form-login > div.login-with > div > i {
+	font-size: 2em;
+	color: floralwhite;
+	opacity: 0.7;
+	transition: opacity 0.5s;
+}
+
+form.form-login > div.login-with > div {
+	-webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+}
+
+form.form-login > div.login-with > div:hover {
+	-webkit-transform: scale(1.2,1.2);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 550ms;
+    -moz-transform: scale(1.2,1.2);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 550ms;
+}
+
+form.form-login > div.login-with > div >  i:hover {
+	transition: opacity 0.5s;
+	opacity: 1;
+	cursor: pointer;
+}
+
+::-webkit-scrollbar-button {
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 5px;
+	height: 0px
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.7); 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow:0px 0px 5px #000 inset; 
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: rgba(149, 6, 196, 0.8);
+	background-image: url('https://yraaa.ru/_pu/24/59610063.png'); 
+	background-position: center; 
+	background-repeat: no-repeat;
+}
+
+::-webkit-resizer{
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 0px
+}
+
+::-webkit-scrollbar{
+	width: 11px;
+}
+
+
