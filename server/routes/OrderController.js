@@ -5,12 +5,13 @@ const fs = require("fs");
 const jwt = require('jsonwebtoken');
 
 const Order = require('../models/order');
+const VerifyToken = require('./VerifyToken');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 router.post('/', (req, res) => {
-	console.log('/orders')
+	console.log('post orders')
 
 	let id = null;
 
@@ -28,7 +29,6 @@ router.post('/', (req, res) => {
 		})		
 	}
 
-		// нумерация месяца с 0 !!!!!
 		let orderDate = req.body.orderDate ? JSON.parse(req.body.orderDate)[0] : req.body.orderDate;
 		let delivery_date = req.body.delivery_date ? JSON.parse(req.body.delivery_date)[0] : req.body.delivery_date;
 
@@ -54,9 +54,6 @@ router.post('/', (req, res) => {
 				.exec((err, user) => {
 				  if (err) console.log('lol');
 
-				  console.log(user)
-				  // console.log(null)
-
 				  if(user.user_id) console.log('The user is %s', user.user_id.name);
 				});
 
@@ -66,5 +63,24 @@ router.post('/', (req, res) => {
 		    
 	    
 });
+
+router.get('/orders', VerifyToken, (req, res) => {
+	console.log('get orders');
+	Order.find({user_id: req.userId})
+		.select("-user_id -__v -basket._id")
+		.populate({
+			path: 'basket.dish',
+			select: '_id title'
+		})
+		.populate({
+			path: 'basket.cafe_id',
+			select: '_id title'
+		})
+		.exec((err, orders) => {
+
+			res.status(200).send(orders)
+		})
+
+})
 
 module.exports = router;

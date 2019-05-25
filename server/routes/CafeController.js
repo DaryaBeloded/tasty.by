@@ -259,70 +259,7 @@ router.get("/", (req, res) => {
 				break;
 			default: res.status(404).send('Проверьте параметры запроса');
 				break;
-		}
-
-		// console.log('LOL2');
-
-		// Cafe.findById(req.query.cafeId)
-		// 	.populate({	
-		// 		path: 'dishes',	
-		// 		populate: { 
-		//     		path: 'category'
-		//       	}
-		// 	})
-		// 	.populate({	path: 'cuisines', select: '_id title'})
-		// 	.exec((err, cafe) => {
-		// 			if (err) console.log('lol');
-
-		// 			// console.log(cafe);
-		// 			// let arr = Object.assign({}, cafe);
-		// 			// // delete arr. ...
-		// 			// // arr. ... = ...
-
-		// 			// СДЕЛАТЬ НОРМАЛЬНОЕ КОПИРОВАНИЕ
-		// 			let arr = {};
-		// 			arr.id = cafe._id;
-		// 			arr.title = cafe.title;
-		// 			arr.delivery = cafe.delivery;
-		// 			arr.delivery_time = cafe.delivery_time;
-		// 			arr.delivery_price = cafe.delivery_price;
-		// 			arr.desc = cafe.desc;
-		// 			arr.address = cafe.address;
-		// 			arr.phone = cafe.phone;
-		// 			arr.dishes = [];
-		// 			arr.cuisines = [];
-		// 			arr.image = cafe.image;
-
-		// 			cafe.dishes.forEach((el) =>{
-		// 				// console.log(el)
-		
-		// 			  	let arr2 = {
-		// 			  		id: el._id,
-		// 			  		title: el.title,
-		// 			  		composition: el.composition,
-		// 			  		price_per_portion: el.price_per_portion,
-		// 			  		weight_per_portion: el.weight_per_portion,
-		// 			  		category: el.category.title,
-		// 			  		image: el.image,
-		// 			  		rating: el.rating
-		// 			  	}
-		// 			  	// console.log(arr2)
-		// 			  	arr.dishes.push(arr2);
-		// 			  	// console.log(arr.dishes)
-		// 			})
-
-		// 			cafe.cuisines.forEach((el) =>{
-		// 			  	let arr2 = {
-		// 			  		id: el._id,
-		// 			  		title: el.title				  	
-		// 			  	}
-		// 			  	arr.cuisines.push(arr2);
-		// 			})
-
-		// 			// console.log(arr)
-
-		// 			res.status(200).send(arr);
-		// 		})
+		}		
 	}
 })
 

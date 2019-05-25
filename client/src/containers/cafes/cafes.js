@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { loadCafes, loadCafe } from '../../redux/actions';
+import { Helmet } from "react-helmet";
+import { loadCafes, loadCafe, setFilter } from '../../redux/actions';
 import { FILTERS } from '../../utils/utils';
 import './cafes.css'
 import { connect } from 'react-redux';
@@ -13,6 +14,7 @@ class Cafes extends Component {
 
     toCafe = cafe => {
         this.props.loadCafe(cafe._id, FILTERS.CAFE, null);
+        this.props.setFilter('');
         this.props.history.push(`cafe/${ cafe._id }`);
     }
 
@@ -69,6 +71,11 @@ class Cafes extends Component {
 
         return (
             <div className="content-list">
+                <Helmet>
+                    <title>Tasty.by. Кафе Минска с доставкой</title>
+                    <meta name="description" content="Tasty.by представляет кафе Минска с доставкой" />
+                    <meta name="fragment" content="!" />
+                </Helmet>
                 <div className = "container">
                     <div className = "title">
                         <span className = "title-content">Кафе Минска</span>
@@ -93,5 +100,6 @@ export default connect(
     {
         loadCafes,
         loadCafe,
+        setFilter,
     }
 )(Cafes)

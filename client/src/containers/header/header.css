@@ -261,6 +261,17 @@ div.small-header > div.container-list-submenu > ul.list-submenu > li >  a:hover 
 	align-items: center;
 }
 
+.container-main-top.on a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.7);
+	transition: color .5s;
+}
+
+.container-main-top.on a:hover {
+	color: floralwhite;
+	transition: color .5s;
+}
+
 .container-main-top.on > .container-top {
 	background-color: rgba(0, 0, 0, 0.9);
 	width: 100%;
@@ -279,11 +290,11 @@ div.small-header > div.container-list-submenu > ul.list-submenu > li >  a:hover 
 }	
 
 .container-main-top.on > .container-top:nth-child(3) {
-	background-image: url("../../img/kitchen.jpg");
+	background-image: url("../../img/food.jpg");
 }
 
 .container-main-top.on > .container-top:last-child {
-	background-image: url("../../img/food.jpg");
+	background-image: url("../../img/kitchen.jpg");
 }
 
 .container-main-top.on > .back {
@@ -336,11 +347,11 @@ div.small-header > div.container-list-submenu > ul.list-submenu > li >  a:hover 
 .container-top > .content-top:hover {
 	background-color: rgba(0, 0, 0, 0.9);
 	transition: background-color 0.5s, color 0.5s;
-	color: rgba(255,255,255, 1);
 }
 
 .content-top > span {
 	font-size: x-large;
+	opacity: 1;
 	margin-bottom: 1em;
 }
 
@@ -354,21 +365,6 @@ div.small-header > div.container-list-submenu > ul.list-submenu > li >  a:hover 
 .content-top > ul > li {
 	list-style-type: none;
 	margin-bottom: 5px;
-	-webkit-transform: scale(1, 1);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 350ms;
-    -moz-transform: scale(1, 1);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 350ms;
-}
-.content-top > ul > li:hover {
-	cursor: pointer;
-	-webkit-transform: scale(1.1,1.1);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 350ms;
-    -moz-transform: scale(1.1,1.1);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 350ms;
 }
 
 div.cover-div {

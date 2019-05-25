@@ -6,6 +6,7 @@ const fs = require("fs");
 const Dish = require('../models/dish');
 const Category = require('../models/category');
 const Cafe = require('../models/cafe');
+const Cuisine = require('../models/cuisine');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
@@ -74,5 +75,35 @@ router.get('/top1', async(req, res) => {
 	})	
 
 })
+
+router.get('/top5', async(req, res) => {
+	console.log("top5")
+	Cafe.find()
+		.limit(5)
+		.select("_id title")
+		.exec((err, cafes) => {
+
+			Category.find()
+					.limit(5)
+					.select("_id title")
+					.exec((err, cat) => {
+
+						Cuisine.find()
+								.limit(5)
+								.select("_id title")
+								.exec((err, cus) => {
+
+									let arr = {
+										"cafes": cafes,
+										"categories": cat, 
+										"cuisines": cus
+									}
+
+									res.status(200).send(arr)
+								})
+					})
+		})	
+})
+
 
 module.exports = router;

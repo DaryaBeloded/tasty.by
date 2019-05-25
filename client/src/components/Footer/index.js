@@ -6,8 +6,7 @@ const Footer = () => {
             <div className="footer">
                 <div className="first-column-rus">
                     <span>
-                        tasty. Агрегатор кафе<br />
-                        Минск, Одоевского, 107<br />
+                        Tasty.by. Агрегатор кафе<br />
                         Белодед Дарья Вячеславовна<br />
                         +375 (29) 814-55-72 МТС<br />
                     </span>
@@ -20,9 +19,8 @@ const Footer = () => {
                 </div>
                 <div className="third-column-eng">
                     <span>
-                        tasty. Агрегатор кафе<br />
-                        Минск, Одоевского, 107<br />
-                        Белодед Дарья Вячеславовна<br />
+                        Tasty.by. Аggregator cafe<br />
+                        Beloded Darya<br />
                         +375 (29) 814-55-72 МТС<br />
                     </span>
                 </div>

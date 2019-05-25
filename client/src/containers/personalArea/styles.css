@@ -37,7 +37,7 @@
 }
 
 .personalarea-info > .active {
-    background-color: #68076e;
+    background-color: rgba(104, 7, 110, 0.6);
     transition: background-color .5s;
 }
 
@@ -81,18 +81,16 @@
 }
 
 .favorites-content .container .img {
-    min-width: 150px;
-    height: 100px;
+    width: 300px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
     align-self: center;
     text-align: center;
 }
 
-.favorites-content .container .img img {
-    height: inherit;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-}
-
 .favorites-content .container .description {
+    width: 100%;
     margin: 0 20px;
     padding: 10px;
     display: flex;
@@ -119,6 +117,7 @@
     font-size: medium;
     color: floralwhite;
     margin-bottom: 10px;
+    opacity: 1;
 }
 
 .favorites-content .container .favorites {

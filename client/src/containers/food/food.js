@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from "react-helmet";
 import Loader from '../../components/Loader';
 import { toggleFavorites, loadFood, addToCart, changeFoodInCart } from '../../redux/actions';
+import { showModal } from '../../utils/utils';
 import './food.css'
 
 class Food extends Component {
@@ -64,10 +66,7 @@ class Food extends Component {
         const food = JSON.parse(target.getAttribute('data-index'));
         const newFood = { ...food, count: this.state.count, cafeId: location.state ? location.state.fromCafe : undefined };
         target.outerText === 'В корзину' ? addToCart(newFood, cart) : changeFoodInCart(newFood, cart);   
-        document.getElementsByClassName('container-succesfull')[0].classList.add('on');
-			setTimeout(() => {
-				document.getElementsByClassName('container-succesfull')[0].classList.remove('on');
-		}, 3000);
+        showModal('ok', 'Товар добавлен в корзину!');
     }
 
     toggleFavorites = ({ target }) => {
@@ -91,6 +90,11 @@ class Food extends Component {
 
         return (
             <div className="content">
+                <Helmet>
+                    <title>Tasty.by. {data.title} с доставкой</title>
+                    <meta name="description" content="Tasty.by предоставляет возможность заказать еду с доставкой" />
+                    <meta name="fragment" content="!" />
+                </Helmet>
                 <div className="about-content">
                     <div className="about-top-part">
                         <div className="image" style={{ backgroundImage: `url(${data.image})` }} >
@@ -102,7 +106,7 @@ class Food extends Component {
                                 ></i>
                                 <div className="rating">
                                     <i className="fa fa-star" aria-hidden="true"></i>
-                                    <span>{data.rating}</span>
+                                    <span>{data.rating ? data.rating.toFixed(1) : null}</span>
                                 </div>
                             </div>
                         </div>

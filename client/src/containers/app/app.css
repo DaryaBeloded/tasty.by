@@ -15,11 +15,13 @@ body {
 div.container-succesfull {
 	transition: opacity 0.5s;
 	opacity: 0;
-    width: 25%;
+    width: max-content;
     height: auto;
     min-height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;    
     background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
+    position: fixed;
     top: 70vh;
     left: 10%;
     /*border-radius: 20px;*/
@@ -28,16 +30,19 @@ div.container-succesfull {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    z-index: 9999;
 }
 
 div.container-succesfull.on {
 	transition: opacity 0.5s;
-	opacity: 1;
-    width: 25%;
+    opacity: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: max-content;
     height: auto;
     min-height: 100px;
     background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
+    position: fixed;
     top: 70vh;
     left: 10%;
     /*border-radius: 20px;*/
@@ -50,10 +55,12 @@ div.container-succesfull.on {
 }
 
 div.container-succesfull > div.text-succesfull {
-	text-align: center;
+    text-align: center;
+    margin-left: 20px;
 }
 
 div.container-succesfull > div.text-succesfull > span {
+    opacity: 1;
 	color: floralwhite;
     font-family: cursive;
     font-size: medium;

@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /auth/register 
+Disallow: /auth/login 
+Disallow: /favorites
+Disallow: /privateOffice/me 
+Disallow: /privateOffice/me
+Disallow: /privateOffice/myFavorites 
+Disallow: /orders
+Disallow: /privateOffice/orders
+Disallow: /privateOffice/rating 
+Sitemap: https://tasty.by/sitemap.xml

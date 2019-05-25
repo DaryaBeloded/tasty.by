@@ -14,9 +14,6 @@ const privateKey = fs.readFileSync('private.key');
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
-// https://github.com/auth0/node-jsonwebtoken
-
-
 router.post('/register', (req, res) => {
 	console.log('register')
 
@@ -63,7 +60,6 @@ router.get('/me', VerifyToken, (req, res) => {
 	  });
 });
 
-// сделать что-то с изменением пароля
 router.put('/me', VerifyToken, (req, res) => {
 	console.log('privatу office put me')
 	

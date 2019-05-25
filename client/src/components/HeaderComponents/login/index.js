@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { login } from '../../../redux/actions';
 
 const Login = ({ login }) => {
-
     const closeFormLogin = () => {
 		document.getElementsByClassName('cover-div')[0].classList.remove('on');
 		document.getElementsByClassName('div-login')[0].classList.remove('on');

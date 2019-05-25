@@ -2,12 +2,13 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../img/newlogo.png';
 import { connect } from 'react-redux';
-import { logout } from '../../../redux/actions';
+import { logout, loadTop5 } from '../../../redux/actions';
 
-const DesktopHeader = ({ auth, logout }) => {
+const DesktopHeader = ({ auth, logout, loadTop5 }) => {
 
     const showTop = () => {
         document.getElementsByClassName('container-main-top')[0].classList.add("on");
+        loadTop5();
     }
 
     const showFormLogin = () => {
@@ -79,11 +80,12 @@ const DesktopHeader = ({ auth, logout }) => {
     )
 }
 
-const mapStateToProps = (state) => (state)
+const mapStateToProps = (state) => (state.login)
 
 export default connect(
     mapStateToProps,
     {
         logout,
+        loadTop5,
     }
 )(DesktopHeader);

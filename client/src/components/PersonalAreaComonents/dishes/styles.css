@@ -1,0 +1,35 @@
+
+.row-dish {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row-dish .description {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-dish .description span:first-child {
+  width: 50%;
+}
+
+.row-dish .description span:nth-child(2) {
+  width: 40%;
+  text-align: center;
+}
+
+.row-dish .description span:last-child {
+  width: 10%;
+  text-align: right;
+}
+
+.row-dish .stars {
+  margin: 0 10px 10px 10px;
+  align-self: flex-end;
+}
+
+.row-dish:nth-child(2) {
+  border-top: 3px solid floralwhite;
+}

@@ -12,7 +12,7 @@ const Header = ({ auth }) => {
 			<DesktopHeader auth={auth} />
 			<MobileHeader auth={auth} />
 			<TopList />
-			{!auth ? <Authorization /> : null}
+			<Authorization />
 		</nav>
 	);
 }

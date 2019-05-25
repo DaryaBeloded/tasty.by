@@ -14,9 +14,9 @@ const RatingController = require('./routes/RatingController');
 
 app.use(cors());
 
-app.use(express.static(require('path').join(__dirname,'/public')));
+app.use(require('prerender-node'));
 
-// app.use ('/top1', DishController);
+app.use(express.static(require('path').join(__dirname,'/public')));
 
 app.use('/orders', OrderController);
 
@@ -37,5 +37,7 @@ app.use('/dishes', DishController);
 
 app.use('/privateOffice', FavoriteController);
 app.use('/privateOffice', AuthController);
+app.use('/privateOffice', OrderController);
+
 
 module.exports = app;

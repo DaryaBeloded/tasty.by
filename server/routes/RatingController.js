@@ -9,33 +9,9 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 router.post('/', (req, res) => {
+	console.log("rating")
 
- //   	Rating.create({
-	// 	dish: req.body.dishId,
-	// 	rating: req.body.rating
-	// }, (err, rating) => {
-	//     if (err) return res.status(500).send("There was a problem saving your rating");
-
-	//      Rating.find({dish: req.body.dishId}, (err, dishes) => {
-	//         if (err) return res.status(500).send("There was a problem finding the dish.");
-	     
-	//         let sum = 0;
-
-	//         dishes.forEach((elem) => {
-	//         	sum += elem.rating;
-	//         })
-
-	//         console.log(sum)
-
-	//         const newrating = sum / dishes.length;
-
-	     //    Dish.findByIdAndUpdate(req.body.dishId, {'$set': {rating: newrating}}, {new: true}, (err, dish) => {
-		    //     if (err) return res.status(500).send("There was a problem updating the dish.");
-
-		    //     // console.log(dish);
-		    // });
-
-	//     });
+	// console.log(req.body.dishId, req.body.rating)
 
 	Rating.findOne({dish: req.body.dishId}, (err, dish) => {
 
@@ -54,7 +30,8 @@ router.post('/', (req, res) => {
 			    Dish.findByIdAndUpdate(req.body.dishId, {'$set': {rating: newrating}}, {new: true}, (err, dish) => {
 			        if (err) return res.status(500).send("There was a problem updating the dish.");
 
-			        // console.log(dish);
+			        console.log(dish);
+			        res.status(200).send("ok");
 			    });
 		
 		    }); 
@@ -73,15 +50,14 @@ router.post('/', (req, res) => {
 				Dish.findByIdAndUpdate(req.body.dishId, {'$set': {rating: newrating}}, {new: true}, (err, dish) => {
 			        if (err) return res.status(500).send("There was a problem updating the dish.");
 
-			        // console.log(dish);
+			        console.log(dish);
+			        res.status(200).send("ok");
 			    });
 
 	    	})
 
 	    }
 		
-
-	    res.status(200).send("ok");
 	})
 
     

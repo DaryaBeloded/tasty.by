@@ -50,15 +50,18 @@ const API = {
     login: (email, password) => apiClient.post('/auth/login', { email, password }),
     registration: obj => apiClient.post('/auth/register', { ...obj }),
     loadTop1: () => apiClient.get('/dishes/top1'),
+    loadTop5: () => apiClient.get('/dishes/top5'),
     loadFood: id => apiClient.get(`/dishes?id=${id}`),
     loadCafes: () => apiClient.get('/cafes'),
     loadCategories: () => apiClient.get('/categories'),
     loadCuisines: () => apiClient.get('/cuisines'),
     getCafeByFilter: (cafeId, filter, filterId) => apiClient.get(`/cafes?cafeId=${cafeId}&filter=${filter}&filterId=${filterId}`),
     addToFavorites: favorite => apiClient.post('/favorites', { favorite }),
+    sendRating: (dishId, rating) => apiClient.post('/rating', { dishId, rating }),
     deleteFromFavorites: favorite => apiClient.delete(`/favorites?id=${favorite}`),
     updateUser: user => apiClient.put('/privateOffice/me', {...user}),
     loadFavorites: () => apiClient.get('/privateOffice/myFavorites'),
+    loadHistory: () => apiClient.get('/privateOffice/orders'),
     creteOrder: order => apiClient.post('/orders', {...order}),
 };
 

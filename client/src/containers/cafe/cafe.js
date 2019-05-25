@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Helmet } from "react-helmet";
 import Loader from '../../components/Loader';
 import './cafe.css';
 
@@ -67,6 +68,11 @@ class Cafe extends Component {
 
         return (
             <main className="wrapper-cafe">
+                <Helmet>
+                    <title>Tasty.by. Кафе {data.title} с доставкой</title>
+                    <meta name="description" content="Tasty.by представляет кафе Минска с доставкой" />
+                    <meta name="fragment" content="!" />
+                </Helmet>
                 <div className='container-cafe'>
                     <div className="info top-row">
                         <div className="img-container">

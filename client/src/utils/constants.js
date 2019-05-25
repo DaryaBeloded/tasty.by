@@ -17,6 +17,10 @@ export const TOP_PENDING = 'top/TOP_PENDING';
 export const TOP_SUCCESS = 'top/TOP_SUCCESS';
 export const TOP_FAILED = 'top/TOP_FAILED';
 
+export const TOP5_PENDING = 'top5/TOP5_PENDING';
+export const TOP5_SUCCESS = 'top5/TOP5_SUCCESS';
+export const TOP5_FAILED = 'top5/TOP5_FAILED';
+
 export const CAFES_PENDING = 'cafes/CAFES_PENDING';
 export const CAFES_SUCCESS = 'cafes/CAFES_SUCCESS';
 export const CAFES_FAILED = 'cafes/CAFES_FAILED';
@@ -24,6 +28,10 @@ export const CAFES_FAILED = 'cafes/CAFES_FAILED';
 export const FAVORITES_PENDING = 'favorites/FAVORITES_PENDING';
 export const FAVORITES_SUCCESS = 'favorites/FAVORITES_SUCCESS';
 export const FAVORITES_FAILED = 'favorites/FAVORITES_FAILED';
+
+export const HISTORY_PENDING = 'history/HISTORY_PENDING';
+export const HISTORY_SUCCESS = 'history/HISTORY_SUCCESS';
+export const HISTORY_FAILED = 'history/HISTORY_FAILED';
 
 export const CAFE_PENDING = 'cafe/CAFE_PENDING';
 export const CAFE_SUCCESS = 'cafe/CAFE_SUCCESS';

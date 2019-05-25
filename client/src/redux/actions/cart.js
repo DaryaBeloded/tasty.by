@@ -1,4 +1,5 @@
 import * as types from '../../utils/constants';
+import { showModal } from '../../utils/utils';
 import API from '../../utils/api';
 
 const cardAdd = data => {
@@ -94,6 +95,9 @@ export const createOrder = order => {
         dispatch(createOrderPending());
         try {
             await API.creteOrder(order);
+            showModal('ok', 'Заказ оформлен. Ожидайте звонка!');
+            document.getElementsByClassName('cover')[0].classList.remove('on');
+    	    document.getElementsByClassName('container-order')[0].classList.remove('on');
             dispatch(createOrderSuccess());
             const newFoods = [];
             localStorage.setItem('cart', JSON.stringify(newFoods));

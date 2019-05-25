@@ -1,4 +1,5 @@
 import * as types from '../../utils/constants';
+import { showModal } from '../../utils/utils';
 import API from '../../utils/api';
 
 const updatePending = () => {
@@ -33,6 +34,7 @@ export const updateUser = newUser => {
         dispatch(updatePending());
         try {
             await API.updateUser(newUser);
+            showModal('ok', 'Информация обновлена!');
             const user = JSON.parse(localStorage.getItem('user'));
             user.user.name = newUser.name;
             user.user.phone = newUser.phone;

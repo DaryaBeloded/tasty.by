@@ -2,8 +2,7 @@ import React from 'react';
 
 const FavoriteItem = ({item, toggleFavorites}) => (
     <div className="container">
-        <div className="img">
-            <img src={item.image} alt={item.alt_img} />
+        <div className="img" style={{ backgroundImage: `url(${item.image})` }}>
         </div>
         <div className="description">
             <span className="title">{item.title}</span>

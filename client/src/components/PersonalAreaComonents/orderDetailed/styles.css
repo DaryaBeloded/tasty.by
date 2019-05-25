@@ -1,0 +1,39 @@
+.container-order-detailed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30%;
+  border-right: 3px solid floralwhite;
+}
+
+.container-order-detailed span {
+  opacity: 1;
+}
+
+.container-order-detailed .title {
+  padding: 10px;
+  background-color: rgba(104, 7, 110, 0.6);
+}
+
+.container-order-detailed .order-desc {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-top: 3px solid floralwhite;
+}
+
+.container-order-detailed .order-desc span {
+  margin-bottom: 10px;
+}
+
+.container-order-detailed .order-desc button {
+  background-color: rgba(104, 7, 110, 0.6);
+  font-size: medium;
+  font-family: cursive;
+  padding: 5px 15px;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}

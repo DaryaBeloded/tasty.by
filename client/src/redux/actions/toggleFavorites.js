@@ -1,4 +1,5 @@
 import API from '../../utils/api';
+import { showModal } from '../../utils/utils';
 import * as types from '../../utils/constants';
 
 const favoritesFoodSuccess = (data) => {
@@ -24,6 +25,7 @@ export const toggleFavorites = (food, oldFoods) => {
             if (favorites.indexOf(food._id) === -1) {
                 const newFood = { ...food, favorites: true };
                 await API.addToFavorites(food._id);
+                showModal('ok', 'Добавлено в избранное!');
                 favorites.push(food._id);
                 const user = { ...JSON.parse(localStorage.getItem('user')) };
                 user.user.favorites = favorites;
@@ -34,6 +36,7 @@ export const toggleFavorites = (food, oldFoods) => {
             }
             else {
                 await API.deleteFromFavorites(food._id);
+                showModal('ok', 'Удалено из избранного!');
                 let newFavorites = favorites.filter(item => item !== food._id);
                 const user = { ...JSON.parse(localStorage.getItem('user')) };
                 user.user.favorites = newFavorites;

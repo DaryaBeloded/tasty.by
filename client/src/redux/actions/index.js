@@ -11,7 +11,9 @@ import { setFilter } from './filter';
 import { toggleFavorites } from './toggleFavorites';
 import { updateUser } from './updateUser';
 import { loadFavorites } from './favorites';
+import { loadHistory, sendRating } from './history';
 import { addToCart, removeFromCart, changeFoodInCart, clearCart, createOrder } from './cart';
+import { loadTop5 } from './top5';
 
 export {
     loadTop,
@@ -27,9 +29,12 @@ export {
     toggleFavorites,
     updateUser,
     loadFavorites,
+    loadHistory,
+    sendRating,
     addToCart,
     removeFromCart,
     changeFoodInCart,
     clearCart,
     createOrder,
+    loadTop5,
 };

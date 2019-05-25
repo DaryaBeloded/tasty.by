@@ -1,6 +1,7 @@
 import * as types from '../../utils/constants';
-import Cookies from 'js-cookie';
+import { showModal } from '../../utils/utils';
 import API from '../../utils/api';
+import Cookies from 'js-cookie';
 
 const loginPending = () => {
     return {
@@ -27,6 +28,8 @@ export const login = (email, password) => {
         dispatch(loginPending());
         try {
             const response = await API.login(email, password);
+            window.location.reload();
+            // showModal('ok', `Добро пожаловать, ${response.data.user.name}`);
             Cookies.set('accessToken', response.data.token);
             localStorage.setItem('user', JSON.stringify(response.data));
             Cookies.set('refreshTOken', response.data.token);
