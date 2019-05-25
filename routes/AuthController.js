@@ -9,7 +9,7 @@ const User = require('../models/user');
 const VerifyToken = require('./VerifyToken');
 const Favorite = require('../models/favorite');
 
-const privateKey = fs.readFileSync('private.key');
+const privateKey = process.env.SECRET || fs.readFileSync('private.key');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());

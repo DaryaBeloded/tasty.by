@@ -16,6 +16,8 @@ app.use(cors());
 
 app.use(require('prerender-node'));
 
+require("dotenv").config()
+
 app.use(express.static(require('path').join(__dirname,'/public')));
 
 app.use('/orders', OrderController);
