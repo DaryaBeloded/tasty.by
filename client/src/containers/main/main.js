@@ -67,7 +67,7 @@ class Main extends Component {
 	}
 
 	componentDidMount = () => {
-		// this.runSlider();
+		this.runSlider();
 	}
 
 	componentWillUnmount = () => {

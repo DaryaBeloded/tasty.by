@@ -47,7 +47,7 @@ const Login = ({ login }) => {
                 />
                 <div className="container-button">
                     <button type="submit" className="button-login">Войти</button>
-                    <button className="button-registration">Регистрация</button>
+                    {/*<button className="button-registration">Регистрация</button>*/}
                 </div>
             </form>
         </div>

@@ -28,7 +28,8 @@ export const registration = obj => {
         dispatch(registrationPending());
         try {
             const response = await API.registration(obj);
-            showModal('ok', `Добро пожаловать, ${response.data.user.name}`);
+            window.location.reload();
+            // showModal('ok', `Добро пожаловать, ${response.data.user.name}`);
             Cookies.set('accessToken', response.data.token);
             Cookies.set('refreshTOken', response.data.token);
             localStorage.setItem('user', JSON.stringify(response.data));

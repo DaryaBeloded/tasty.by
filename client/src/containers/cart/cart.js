@@ -33,6 +33,7 @@ class Cart extends Component {
 
     deleteItem = e => {
         e.stopPropagation();
+        console.log(e.target);
         const {
             removeFromCart,
             cart,
