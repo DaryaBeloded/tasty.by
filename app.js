@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const db = require ('./db');
 const cors = require('cors');
+const path = require("path");
 
 const AuthController = require('./routes/AuthController');
 const CuisineController = require('./routes/CuisineController');
@@ -18,7 +19,9 @@ app.use(require('prerender-node'));
 
 require("dotenv").config()
 
-app.use(express.static(require('path').join(__dirname,'/public')));
+app.use(express.static(path.join(__dirname,'/public')));
+
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.use('/orders', OrderController);
 
@@ -40,6 +43,10 @@ app.use('/dishes', DishController);
 app.use('/privateOffice', FavoriteController);
 app.use('/privateOffice', AuthController);
 app.use('/privateOffice', OrderController);
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 module.exports = app;
