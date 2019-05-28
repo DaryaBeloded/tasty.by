@@ -18,7 +18,7 @@ class Favorites extends Component {
                 data,
             },
         } = this.props;
-        console.log(data);
+
         toggleFavorites(food, data);
     }
 
@@ -28,7 +28,6 @@ class Favorites extends Component {
                 data,
                 isLoading,
             },
-
          } = this.props;
         
         if (isLoading) {

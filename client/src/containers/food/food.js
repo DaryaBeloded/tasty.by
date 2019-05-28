@@ -71,6 +71,7 @@ class Food extends Component {
 
     toggleFavorites = ({ target }) => {
         const food = JSON.parse(target.getAttribute('data-index'));
+        food.fromCafe = this.props.history.location.state ? this.props.history.location.state.fromCafe : undefined;
         this.props.toggleFavorites(food);
     }
 
