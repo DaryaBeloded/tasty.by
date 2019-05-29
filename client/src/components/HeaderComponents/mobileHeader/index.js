@@ -2,13 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../img/newlogo.png';
 import { connect } from 'react-redux';
-import { logout } from '../../../redux/actions';
+import { logout, clearCart } from '../../../redux/actions';
 
 const MobileHeader = props => {
 
     const {
         auth,
         logout,
+        clearCart,
     } = props;
 
     const showTop = () => {
@@ -40,6 +41,7 @@ const MobileHeader = props => {
             window.location.pathname === '/personal-area/favorites'
         ) window.location.pathname = '/';
         logout();
+        clearCart();
     }
 
     return (
@@ -103,5 +105,6 @@ export default connect(
     mapStateToProps,
     {
         logout,
+        clearCart,
     }
 )(MobileHeader);

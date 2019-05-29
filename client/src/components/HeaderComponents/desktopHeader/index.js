@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../img/newlogo.png';
 import { connect } from 'react-redux';
-import { logout, loadTop5 } from '../../../redux/actions';
+import { logout, loadTop5, clearCart } from '../../../redux/actions';
 
-const DesktopHeader = ({ auth, logout, loadTop5 }) => {
+const DesktopHeader = ({ auth, logout, loadTop5, clearCart }) => {
 
     const showTop = () => {
         document.getElementsByClassName('container-main-top')[0].classList.add("on");
@@ -30,6 +30,7 @@ const DesktopHeader = ({ auth, logout, loadTop5 }) => {
             window.location.pathname === '/personal-area/history' || 
             window.location.pathname === '/personal-area/favorites'
         ) window.location.pathname = '/';
+        clearCart();
         logout();
     }
 
@@ -87,5 +88,6 @@ export default connect(
     {
         logout,
         loadTop5,
+        clearCart,
     }
 )(DesktopHeader);

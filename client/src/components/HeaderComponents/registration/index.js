@@ -1,9 +1,9 @@
 import React from 'react';
 import Logo from '../../../img/newlogo.png';
 import { connect } from 'react-redux';
-import { registration } from '../../../redux/actions';
+import { registration, clearCart } from '../../../redux/actions';
 
-const Registration = ({ registration }) => {
+const Registration = ({ registration, clearCart }) => {
 
     const closeFormRegistration = () => {
 		document.getElementsByClassName('cover-div')[0].classList.remove('on');
@@ -17,20 +17,23 @@ const Registration = ({ registration }) => {
 		const email = document.getElementsByClassName('registration-email')[0].value;
 		const password = document.getElementsByClassName('registration-password')[0].value;
 		const repeatPassword = document.getElementsByClassName('registration-repeat-password')[0].value;
-		name === '' || phone === '' || email === '' || password === '' || repeatPassword === '' ? (
-			alert('Данные не введены')
-		) : (
-			password !== repeatPassword ? (
+		if (name === '' || phone === '' || email === '' || password === '' || repeatPassword === '') {
+			alert('Данные не введены');
+        }
+		else {
+			if (password !== repeatPassword) {
 				alert('Пароли не совпадают')
-			) : (
+            }
+			else {
 				registration({
 					name,
 					phone,
 					email,
 					password,
-				})
-			)
-		)
+				});
+                clearCart();
+			}
+		}
 	}
 
     return (
@@ -85,5 +88,6 @@ export default connect(
     mapStateToProps,
     {
         registration,
+        clearCart,
     }
 )(Registration);
