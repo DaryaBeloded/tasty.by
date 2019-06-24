@@ -44,13 +44,7 @@ const DesktopHeader = ({ auth, logout, loadTop5, clearCart }) => {
             <div className="container-list">
                 <ul className="list">
                     <li>
-                        <Link className="cafes" to='/cafes'>Кафе</Link>
-                    </li>
-                    <li>
-                        <Link className="categories" to='/categories'>Категории</Link>
-                    </li>
-                    <li>
-                        <Link className="cuisines" to='/cuisines'>Кухни</Link>
+                        <Link className="cafes" to='/cafes'>Наши кафе</Link>
                     </li>
                     <li>
                         <span className="show-top" onClick={showTop}>Топ-5</span>

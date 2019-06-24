@@ -77,8 +77,6 @@ div.name-of-food {
     background-color: rgba(0, 0, 0, 0.9);
     color: floralwhite;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    /*border-color: rgba(255,255,255,1);*/
-    /*border-style: solid;*/
     padding: 20px;
     min-width: 300px;
     text-align: center; 
@@ -92,24 +90,43 @@ div.name-of-food > span {
 div.container-food {
 	display: flex;
     display: -ms-flexbox;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: center;
 	width: 100%;
-    min-height: 75vh;
     margin: 70px 0; 
-	height: auto;
-	background-size: cover;
-	background-position: center;
 }
 
-div.container-food > div.container-top {
+.container-food .title {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    padding: 20px 0;
+}
+
+.container-food .title span {
+    font-size: 24px;
+    opacity: 1;
+}
+
+.container-food .foods {
+    width: 90%;
+    margin: auto;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.container-food div.container-top {
 	width: 100%;
-	height: auto;
-	max-width: 400px;
-	margin: 20px 10px;
-	background-color: rgba(0, 0, 0, 0.8);
+	height: 400px;
+	max-width: 320px;
+	margin: 20px auto;
+	background-color: rgba(0, 0, 0, 0.9);
 	display: flex;
     display: -ms-flexbox;
 	flex-direction: column;
@@ -117,66 +134,44 @@ div.container-food > div.container-top {
 	align-items: center;
 	align-self: center;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,1);
-
 }
 
-div.container-food > div.container-top > a > img {
+div.container-food div.container-top > div {
+    height: 70%;
+    display: flex;
+}
+
+div.container-food div.container-top > div > img {
 	width: 100%;
-	min-width: 430px;
+	min-width: 300px;
 	max-height: 250px;
 	height: auto;
-	box-shadow: 0 0 20px 0 rgba(0,0,0,1);
-	-webkit-transform: scale(1.0,1.0);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 200ms;
-    -moz-transform: scale(1.0,1.0);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 200ms;
+    align-self: center;
 }
 
-div.container-food > div > a > img:hover {
-	-webkit-transform: scale(1.07,1.07);
-    -webkit-transition-timing-function: ease-out;
-    -webkit-transition-duration: 200ms;
-    -moz-transform: scale(1.07,1.07);
-    -moz-transition-timing-function: ease-out;
-    -moz-transition-duration: 200ms;
-    cursor: pointer;
-}
-
-div.container-food > div.container-top > div.about-top {
+div.container-food div.container-top > div.about-top {
 	width: 90%;
-    max-height: 120px;
     height: auto;
     display: flex;
-    display: -ms-flexbox;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     margin: 20px 0;
     font-size: medium;
     color: rgba(255, 255, 255, 1);
     font-family: cursive;
 }
 
-div.container-food > div.container-top > div.about-top:hover {
+div.container-food div.container-top > div.about-top:hover {
 	cursor: default;
 }
 
-div.about-top > div.about-top-top-part > div.about-top-top-part-name {
-	margin-bottom: 10px;
+div.about-top > div.about-top-top-part {
+	width: 100%;
+    text-align: center;
 }
 
-div.about-top > div.about-top-bottom-part {
-	display: flex;
-    display: -ms-flexbox;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-div.about-top > div.about-top-bottom-part > div.about-top-bottom-part-price {
-	margin-bottom: 10px;
+div.about-top > div.about-top-top-part > a {
+    opacity: 1;
+    text-decoration: none;
 }
 
 div.footer {

@@ -13,6 +13,8 @@ const PersonalSiderMenu = ({ history }) => {
     let dataClassName = 'data';
     let historyClassName = 'history';
     let favoritesClassName = 'favorites';
+    let feedbackClassName = 'feedback';
+    let groupsClassName = 'groups';
 
 
     switch (history.location.pathname) {
@@ -20,18 +22,40 @@ const PersonalSiderMenu = ({ history }) => {
             dataClassName = 'data active';
             historyClassName = 'history';
             favoritesClassName = 'favorites';
+            feedbackClassName = 'feedback';
+            groupsClassName = 'groups';
             break;
 
         case '/personal-area/history':
             dataClassName = 'data';
             historyClassName = 'history active';
             favoritesClassName = 'favorites';
+            feedbackClassName = 'feedback';
+            groupsClassName = 'groups';
             break;
 
         case '/personal-area/favorites':
             dataClassName = 'data';
             historyClassName = 'history';
             favoritesClassName = 'favorites active';
+            feedbackClassName = 'feedback';
+            groupsClassName = 'groups';
+            break;
+
+        case '/personal-area/feedback':
+            dataClassName = 'data';
+            historyClassName = 'history';
+            favoritesClassName = 'favorites';
+            feedbackClassName = 'feedback active';
+            groupsClassName = 'groups';
+            break;
+
+        case '/personal-area/groups':
+            dataClassName = 'data';
+            historyClassName = 'history';
+            favoritesClassName = 'favorites';
+            feedbackClassName = 'feedback';
+            groupsClassName = 'groups active';
             break;
 
         default: return 'data active';
@@ -65,6 +89,24 @@ const PersonalSiderMenu = ({ history }) => {
                         className="personalarea-title"
                     >
                         Избранное
+                    </Link>
+                </div>
+                <div className={feedbackClassName}>
+                    <Link
+                        to="/personal-area/feedback"
+                        onClick={handleClick}
+                        className="personalarea-title"
+                    >
+                        Изменить блюдо
+                    </Link>
+                </div>
+                <div className={groupsClassName}>
+                    <Link
+                        to="/personal-area/groups"
+                        onClick={handleClick}
+                        className="personalarea-title"
+                    >
+                        Группы
                     </Link>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const FavoriteItem = ({item, toggleFavorites}) => (
     <Link to={{ pathname: `/food/${item._id}` }}>
-        <div className="container" onClick={e => e.stopPropagation()}>
+        <div className="container">
             <div className="img" style={{ backgroundImage: `url(${item.image})` }}>
             </div>
             <div className="description">

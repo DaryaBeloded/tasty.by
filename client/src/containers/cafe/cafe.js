@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Helmet } from "react-helmet";
 import Loader from '../../components/Loader';
 import './cafe.css';
 
@@ -60,6 +59,8 @@ class Cafe extends Component {
             }
         } = this.props;
 
+        const cuisines = data.cuisines ? data.cuisines.map(item => item.title) : null;
+
         if (isLoading) return (
             <div className="loader">
                 <Loader />
@@ -68,11 +69,6 @@ class Cafe extends Component {
 
         return (
             <main className="wrapper-cafe">
-                <Helmet>
-                    <title>Tasty.by. Кафе {data.title} с доставкой</title>
-                    <meta name="description" content="Tasty.by представляет кафе Минска с доставкой" />
-                    <meta name="fragment" content="!" />
-                </Helmet>
                 <div className='container-cafe'>
                     <div className="info top-row">
                         <div className="img-container">
@@ -81,20 +77,11 @@ class Cafe extends Component {
                         <div className="container-description">
                             <span className="cafe-title">{data.title}</span>
                             <div className="cafe-desc">
-                                <span className="cafe-cuisine">Кухни: {data.cuisines ? data.cuisines.map(item => item.title) : null}</span>
+                                <span className="cafe-cuisine">Кухни: {cuisines.join(', ')}</span>
                                 <span className="cafe-time">Время работы: {data.delivery}</span>
                                 <span className="cafe-delivery">Доставка: {data.delivery_time}</span>
                                 <span className="cafe-address">Адрес: {data.address ? data.address.map(item => item) : null}</span>
                                 <span className="cafe-phone">Телефон: {data.phone}</span>
-                                <span className="cafe-link">Сайт:
-                                    <a
-                                        href={data.link}
-                                        target='_blank'
-                                        rel="noopener noreferrer"
-                                    >
-                                        {data.link}
-                                    </a>
-                                </span>
                             </div>
                         </div>
                     </div>

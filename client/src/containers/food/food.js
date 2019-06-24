@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Helmet } from "react-helmet";
 import Loader from '../../components/Loader';
 import { toggleFavorites, loadFood, addToCart, changeFoodInCart } from '../../redux/actions';
 import { showModal } from '../../utils/utils';
@@ -91,11 +90,6 @@ class Food extends Component {
 
         return (
             <div className="content">
-                <Helmet>
-                    <title>Tasty.by. {data.title} с доставкой</title>
-                    <meta name="description" content="Tasty.by предоставляет возможность заказать еду с доставкой" />
-                    <meta name="fragment" content="!" />
-                </Helmet>
                 <div className="about-content">
                     <div className="about-top-part">
                         <div className="image" style={{ backgroundImage: `url(${data.image})` }} >

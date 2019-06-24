@@ -218,3 +218,125 @@
     color: rgba(0, 0, 0, 1);
     transition: background-color 0.5s, color 0.5s;
 }
+
+.feedback-container {
+    flex-direction: column !important;
+    align-items: center;
+    overflow: auto;
+}
+
+.feedback-container .title {
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.feedback-container span {
+    opacity: 1;
+}
+
+.feedback-container span:hover {
+    cursor: text;
+}
+
+.feedback-container select {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: medium;
+    color: floralwhite;
+    margin-top: 20px;
+    padding: 10px;
+    width: 84.4%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid floralwhite;
+    outline: none;
+}
+
+.feedback-container select option {
+    background-color: rgba(0, 0, 0, 1);
+    outline: none;
+}
+
+.feedback-container select option:hover {
+    background-color: rgba(104, 7, 110, 0.6);
+}
+
+.feedback-container .desc {
+    margin-top: 20px;
+    padding: 2%;
+    border: 2px solid floralwhite;
+    width: 80%;
+    height: max-content;
+    min-height: 20px;
+}
+
+.feedback-container .desc  span {
+    width: 100%;
+}
+
+.feedback-container textarea {
+    width: 81%;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 100px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: medium;
+    color: floralwhite;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid floralwhite;
+    outline: none;
+    resize: none;
+}
+
+.feedback-container button {
+    margin: 20px 0;
+    font-size: medium;
+    font-family: cursive;
+    padding: 5px 15px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0); 
+    border-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    transition: background-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.feedback-container button:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+.feedback-container .chat {
+    margin-top: 20px;
+    width: 79.5%;
+    padding: 2%;
+    height: 200px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid floralwhite;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: flex-end;*/
+}
+
+.feedback-container .chat .message {
+    -ms-align-self: flex-end;
+    align-self: flex-end;
+    padding: 10px;
+    background-color: floralwhite;
+    color: black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.feedback-container input {
+    margin-top: 20px;
+    width: 80.5%;
+    padding: 10px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: medium;
+    color: floralwhite;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid floralwhite;
+    outline: none;
+}

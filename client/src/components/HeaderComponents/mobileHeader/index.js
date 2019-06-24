@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../../img/newlogo.png';
 import { connect } from 'react-redux';
-import { logout, clearCart } from '../../../redux/actions';
+import { logout, clearCart, loadTop5 } from '../../../redux/actions';
 
 const MobileHeader = props => {
 
@@ -10,10 +10,12 @@ const MobileHeader = props => {
         auth,
         logout,
         clearCart,
+        loadTop5,
     } = props;
 
     const showTop = () => {
         document.getElementsByClassName('container-main-top')[0].classList.add("on");
+        loadTop5();
     }
 
     const showMenu = () => {
@@ -54,15 +56,7 @@ const MobileHeader = props => {
             <div className="container-list-submenu">
                 <ul className="list-submenu">
                     <li>
-                        <Link className="cafes" to='/cafes'>Кафе</Link>
-                    </li>
-                    <li><hr /></li>
-                    <li>
-                        <Link className="categories" to='/categories'>Категории</Link>
-                    </li>
-                    <li><hr /></li>
-                    <li>
-                        <Link className="cuisines" to='/cuisines'>Кухни</Link>
+                        <Link className="cafes" to='/cafes'>Наши кафе</Link>
                     </li>
                     <li><hr /></li>
                     <li>
@@ -106,5 +100,6 @@ export default connect(
     {
         logout,
         clearCart,
+        loadTop5,
     }
 )(MobileHeader);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { loadCafes, loadCafe, setFilter } from '../../redux/actions';
 import { FILTERS } from '../../utils/utils';
 import './cafes.css'
@@ -14,6 +13,7 @@ class Cafes extends Component {
 
     toCafe = cafe => {
         this.props.loadCafe(cafe._id, FILTERS.CAFE, null);
+        console.log(cafe._id, FILTERS.CAFE);
         this.props.setFilter('');
         this.props.history.push(`cafe/${ cafe._id }`);
     }
@@ -69,16 +69,13 @@ class Cafes extends Component {
 
         const items = this.getItems(data);
 
+        console.log(data);
+
         return (
             <div className="content-list">
-                <Helmet>
-                    <title>Tasty.by. Кафе Минска с доставкой</title>
-                    <meta name="description" content="Tasty.by представляет кафе Минска с доставкой" />
-                    <meta name="fragment" content="!" />
-                </Helmet>
                 <div className = "container">
                     <div className = "title">
-                        <span className = "title-content">Кафе Минска</span>
+                        <span className = "title-content">Наши кафе в Минске</span>
                     </div>
                     <div className = "list-of-current-title">
                         { items }

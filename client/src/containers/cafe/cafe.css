@@ -44,6 +44,11 @@
 .info.top-row .container-description span {
     font-family: cursive;
     color: floralwhite;
+    opacity: 1;
+}
+
+.info.top-row .container-description span:hover {
+    cursor: text;
 }
 
 .info.top-row .container-description .cafe-title {
@@ -77,14 +82,19 @@
 .wrapper-cafe .filter span {
     font-family: cursive;
     color: floralwhite;
-    font-size: 18px;    
+    font-size: 18px;  
+    opacity: 1;  
+}
+
+.wrapper-cafe .filter span:hover {
+    cursor: text;
 }
 
 .cafe-foods {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .card-food {
@@ -131,6 +141,11 @@
     font-family: cursive;
     color: floralwhite;
     font-size: 15px; 
+    opacity: 1;
+}
+
+.card-food span:hover {
+    cursor: text;
 }
 
 .card-food .food-info {

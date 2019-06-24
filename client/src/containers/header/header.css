@@ -189,7 +189,7 @@ div.small-header > div.cart > a > i:hover {
 div.small-header > div.container-list-submenu {
     display: none;
 	width: 250px;
-	height: 450px;
+	height: 350px;
 	background: rgba(0, 0, 0, 0.9);
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;

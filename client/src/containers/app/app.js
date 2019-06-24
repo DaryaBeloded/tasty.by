@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Helmet } from "react-helmet";
 import Header from '../header';
 import Footer from '../../components/Footer';
 import Main from '../main';
@@ -24,11 +23,6 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Helmet>
-				    <title>Tasty.by. ТОП-1 по категориям блюд</title>
-				    <meta name="description" content="Tasty.by представляет ТОП-1 блюд по категориям" />
-				    <meta name="fragment" content="!" />
-				</Helmet>
 				<Header />
 				<Switch>
 					<Route exact path='/' component={Main} />

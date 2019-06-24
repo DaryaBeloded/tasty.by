@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { loadCuisines } from '../../redux/actions';
 import { connect } from 'react-redux';
 import Loader from '../../components/Loader';
@@ -31,11 +30,6 @@ class Structure extends Component {
 
         return (
             <main className="wrapper">
-                <Helmet>
-                    <title>Tasty.by. Кухни блюд с доставкой</title>
-                    <meta name="description" content="Tasty.by представляет кафе Минска по кухням мира с доставкой" />
-                    <meta name="fragment" content="!" />
-                </Helmet>
                 <ItemsList 
                     data={data} 
                     history={history}

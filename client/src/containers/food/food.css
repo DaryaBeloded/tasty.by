@@ -11,6 +11,14 @@ div.content {
 	margin-top: 90px;
 }
 
+div.content span {
+	opacity: 1;
+}
+
+div.content span:hover {
+	cursor: text;
+}
+
 div.about-button-back {
 	align-self: flex-start;
 	margin-left: 70px;
